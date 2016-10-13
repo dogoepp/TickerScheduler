@@ -64,6 +64,16 @@ bool TickerScheduler::remove(uint i)
     return true;
 }
 
+bool TickerScheduler::changePeriod(uint i, uint32_t period)
+{
+    if (i >= this->size || !this->items[i].is_used)
+        return false;
+
+    this->items[i].period = period;
+
+    return true;
+}
+
 bool TickerScheduler::disable(uint i)
 {
     if (i >= this->size || !this->items[i].is_used)
@@ -108,7 +118,7 @@ void TickerScheduler::update()
     {
         if (this->items[i].is_used)
             handleTicker(this->items[i].cb, &this->items[i].flag);
-        
+
         yield();
     }
 }

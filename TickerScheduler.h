@@ -26,9 +26,10 @@ private:
 public:
     TickerScheduler(uint size);
     ~TickerScheduler();
-    
+
     bool add(uint i, uint32_t period, tscallback_t, boolean shouldFireNow = false);
     bool remove(uint i);
+    bool changePeriod(uint i, uint32_t period);
     bool enable(uint i);
     bool disable(uint i);
     void enableAll();
