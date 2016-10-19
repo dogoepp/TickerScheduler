@@ -1,3 +1,6 @@
+#ifndef TICKER_SCHEDULER_H_
+#define TICKER_SCHEDULER_H_
+
 #include <Ticker.h>
 #include <stdint.h>
 #include <functional>
@@ -35,3 +38,5 @@ public:
     void disableAll();
     void update();
 };
+
+#endif //TICKER_SCHEDULER_H_
