@@ -1,5 +1,5 @@
-#ifndef TICKER_SCHEDULER_H_
-#define TICKER_SCHEDULER_H_
+#ifndef TICKERSCHEDULER_H
+#define TICKERSCHEDULER_H
 
 #include <Ticker.h>
 #include <stdint.h>
@@ -40,4 +40,4 @@ public:
     void update();
 };
 
-#endif //TICKER_SCHEDULER_H_
+#endif
