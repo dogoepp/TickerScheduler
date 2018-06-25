@@ -1,7 +1,7 @@
 #ifndef TICKERSCHEDULER_H
 #define TICKERSCHEDULER_H
 
-#include <arduino.h>
+#include <Arduino.h>
 #include <stdint.h>
 
 
@@ -76,7 +76,7 @@ public:
     TickerScheduler(uint8_t size);
     ~TickerScheduler();
     
-    bool add(uint8_t i, uint32_t period, tscallback_t, boolean shouldFireNow = false);
+    bool add(uint8_t i, uint32_t period, tscallback_t, bool shouldFireNow = false);
     bool remove(uint8_t i);
     bool enable(uint8_t i);
     bool disable(uint8_t i);
